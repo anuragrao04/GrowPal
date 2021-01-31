@@ -1,6 +1,6 @@
 # GrowPal
+This is a repository for managing code for the GrowPal project. 
 
+# Installation
+run 'main.py' after cloning the entire repository as this code requires a few dependencies. 
 
-# Installation 
-We haven't started working on the logic and other required elements of the UI. As of now, only a non functional basic login screen and logo is visible. 
-Hence, running the 'main_ui.py' would do the job.
