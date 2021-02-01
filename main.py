@@ -26,12 +26,19 @@ class login_page(QMainWindow):
     def __init__(self):
         super(login_page,self).__init__()
         loadUi("loginPage.ui",self)
+        self.pushbutton_login.clicked.connect(self.gotologin_register_page)
+    def gotologin_register_page(self):
+        widget.setCurrentIndex(widget.currentIndex()-1)
+    
         
 
 class register_page(QMainWindow):
     def __init__(self):
         super(register_page, self).__init__()
         loadUi("registerPage.ui", self)
+        self.pushbutton_register.clicked.connect(self.gotologin_register_page)
+    def gotologin_register_page(self):
+        widget.setCurrentIndex(widget.currentIndex()-2)
 
 
 #main
