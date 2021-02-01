@@ -56,9 +56,9 @@ widget.setFixedHeight(600)
 main_window = MainWindow()
 loginpage = login_page()
 registerpage = register_page()
-widget.addWidget(main_window)
-widget.addWidget(loginpage)
-widget.addWidget(registerpage)
+widget.addWidget(main_window) #1
+widget.addWidget(loginpage)   #2
+widget.addWidget(registerpage)#3
 widget.show()
 
 
