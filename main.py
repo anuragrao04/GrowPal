@@ -26,9 +26,13 @@ class login_page(QMainWindow):
     def __init__(self):
         super(login_page,self).__init__()
         loadUi("loginPage.ui",self)
-        self.pushbutton_login.clicked.connect(self.gotologin_register_page)
-    def gotologin_register_page(self):
-        widget.setCurrentIndex(widget.currentIndex()-1)
+        self.pushbutton_login.clicked.connect(self.login_button_pressed)
+    def login_button_pressed(self):
+        if self.lineedit_username.text() == "" or self.lineedit_password.text() == "":
+            print("empty")
+        
+        else:
+            widget.setCurrentIndex(widget.currentIndex()-1)
     
         
 
