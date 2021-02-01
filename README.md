@@ -4,6 +4,6 @@ This is a repository for managing code for the GrowPal project.
 # Installation
 run 'main.py' after cloning the entire repository as this code has a few dependencies. 
 
-# Progress 
-Made the 'register' button functional on 31st of January 2021. All the other elements of the UI remain unfunctional. 
+# Progress
+Completed UI elements for login/register pages. The logic for storing data from the text input fields is in progress. 
 
