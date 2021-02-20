@@ -82,7 +82,10 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size:18pt;</string>
+     <string notr="true">font-size:16pt;</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
     </property>
    </widget>
    <widget class="QPushButton" name="pushbutton_login">
