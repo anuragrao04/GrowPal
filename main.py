@@ -1,10 +1,11 @@
+#Import statements
 import sys 
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QMainWindow
 
 
-
+#Class declaration for all pages:
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
