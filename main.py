@@ -1,9 +1,9 @@
-#Import statements
+#Import statements:
 import sys 
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QMainWindow
-
+#End of import statements 
 
 #Class declaration for all pages:
 class MainWindow(QMainWindow):
@@ -18,7 +18,7 @@ class MainWindow(QMainWindow):
     def gotoregister_page(self):
         widget.setCurrentIndex(widget.currentIndex() + 2)
 
-        
+
 
 
 
