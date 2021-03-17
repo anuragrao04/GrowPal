@@ -5,6 +5,11 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QMainWindow
 #End of import statements 
 
+
+#Variables:
+global dictionary_emails_and_passwords
+
+
 #Class declaration for all pages:
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -44,9 +49,12 @@ class register_page(QMainWindow):
     def register_button_pressed(self):
         if self.lineEdit_email.text() == "" or self.lineEdit_phnumber.text() == "" or self.lineEdit_password.text() == "" or self.lineEdit_repeatpassword.text() == "":
             print("empty")
-        else:
+        elif self.lineEdit_password.text() == self.lineEdit_repeatpassword.text():
             widget.setCurrentIndex(widget.currentIndex()+1)
-
+        elif self.lineEdit_password.text() != self.lineEdit_repeatpassword.text():
+            error_dialog = QtWidgets.QErrorMessage(self)
+            error_dialog.setWindowTitle('Password')
+            error_dialog.showMessage('Your passwords do not match. Try again.')
 class buy_page(QMainWindow):
     def __init__(self) -> None:
         super(buy_page, self).__init__()
