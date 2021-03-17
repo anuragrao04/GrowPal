@@ -301,6 +301,86 @@
     <property name="title">
      <string>Categories</string>
     </property>
+    <widget class="QMenu" name="menuApparel">
+     <property name="title">
+      <string>Apparel</string>
+     </property>
+     <widget class="QMenu" name="menuFootwear">
+      <property name="title">
+       <string>Footwear</string>
+      </property>
+      <addaction name="actionShoes"/>
+      <addaction name="actionFlip_FLops"/>
+      <addaction name="actionBoots"/>
+      <addaction name="actionSneakers"/>
+      <addaction name="actionHeels"/>
+     </widget>
+     <addaction name="actionCasials_2"/>
+     <addaction name="actionMen_s_clothing_2"/>
+     <addaction name="actionTrowsers"/>
+     <addaction name="actionShirts_Tops"/>
+     <addaction name="actionSarees"/>
+     <addaction name="actionKurtis"/>
+     <addaction name="actionWinterwear"/>
+     <addaction name="menuFootwear"/>
+     <addaction name="actionCasials"/>
+    </widget>
+    <widget class="QMenu" name="menuAccessories">
+     <property name="title">
+      <string>Accessories</string>
+     </property>
+     <addaction name="actionRings"/>
+     <addaction name="actionNecklaces"/>
+     <addaction name="actionEar_rings"/>
+     <addaction name="actionBelts"/>
+     <addaction name="actionBags"/>
+     <addaction name="actionKeycgains"/>
+    </widget>
+    <widget class="QMenu" name="menuHome_Decor">
+     <property name="title">
+      <string>Home Decor</string>
+     </property>
+     <addaction name="actionPaintings"/>
+     <addaction name="actionCots"/>
+     <addaction name="actionWall_Hangings"/>
+     <addaction name="actionCarpets"/>
+     <addaction name="actionTaperstires"/>
+     <addaction name="actionWind_Chimes"/>
+    </widget>
+    <widget class="QMenu" name="menuFood">
+     <property name="title">
+      <string>Food</string>
+     </property>
+     <addaction name="actionServices"/>
+     <addaction name="actionSnacks"/>
+     <addaction name="actionDeserts"/>
+     <addaction name="actionChinese"/>
+     <addaction name="actionNorth_Indian"/>
+     <addaction name="actionSouth_Indian"/>
+    </widget>
+    <widget class="QMenu" name="menuCosmetics">
+     <property name="title">
+      <string>Cosmetics</string>
+     </property>
+     <addaction name="actionSkin_care"/>
+     <addaction name="actionEye_makeup"/>
+    </widget>
+    <widget class="QMenu" name="menuOthers">
+     <property name="title">
+      <string>Others</string>
+     </property>
+     <addaction name="actionTupperware"/>
+     <addaction name="actionHandmade"/>
+     <addaction name="actionElectronics"/>
+     <addaction name="actionMiscelaneous"/>
+    </widget>
+    <addaction name="menuFood"/>
+    <addaction name="menuCosmetics"/>
+    <addaction name="menuApparel"/>
+    <addaction name="menuAccessories"/>
+    <addaction name="menuHome_Decor"/>
+    <addaction name="actionStationary"/>
+    <addaction name="menuOthers"/>
    </widget>
    <widget class="QMenu" name="menuSell">
     <property name="title">
@@ -323,6 +403,246 @@
    <addaction name="menuLogout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionMen_s_clothing">
+   <property name="text">
+    <string>Men's clothing</string>
+   </property>
+  </action>
+  <action name="actionWomen_s_clothing">
+   <property name="text">
+    <string>Women's clothing</string>
+   </property>
+  </action>
+  <action name="actionFood">
+   <property name="text">
+    <string>Food</string>
+   </property>
+  </action>
+  <action name="actionFood_2">
+   <property name="text">
+    <string>Cakes</string>
+   </property>
+  </action>
+  <action name="actionIndian_Breads">
+   <property name="text">
+    <string>Indian Breads</string>
+   </property>
+  </action>
+  <action name="actionChicken">
+   <property name="text">
+    <string>Chicken </string>
+   </property>
+  </action>
+  <action name="actionMen_s_clothing_2">
+   <property name="text">
+    <string>Dresses</string>
+   </property>
+  </action>
+  <action name="actionTrowsers">
+   <property name="text">
+    <string>Pants</string>
+   </property>
+  </action>
+  <action name="actionShirts_Tops">
+   <property name="text">
+    <string>Shirts/Tops</string>
+   </property>
+  </action>
+  <action name="actionSarees">
+   <property name="text">
+    <string>Sarees</string>
+   </property>
+  </action>
+  <action name="actionTraditional">
+   <property name="text">
+    <string>Traditional</string>
+   </property>
+  </action>
+  <action name="actionRings">
+   <property name="text">
+    <string>Rings</string>
+   </property>
+  </action>
+  <action name="actionNecklaces">
+   <property name="text">
+    <string>Necklaces</string>
+   </property>
+  </action>
+  <action name="actionEar_rings">
+   <property name="text">
+    <string>Earings</string>
+   </property>
+  </action>
+  <action name="actionBelts">
+   <property name="text">
+    <string>Belts</string>
+   </property>
+  </action>
+  <action name="actionBags">
+   <property name="text">
+    <string>Bags</string>
+   </property>
+  </action>
+  <action name="actionPaintings">
+   <property name="text">
+    <string>Paintings</string>
+   </property>
+  </action>
+  <action name="actionCots">
+   <property name="text">
+    <string>Chandeliers</string>
+   </property>
+  </action>
+  <action name="actionWall_Hangings">
+   <property name="text">
+    <string>Wall Hangings</string>
+   </property>
+  </action>
+  <action name="actionCarpets">
+   <property name="text">
+    <string>Carpets</string>
+   </property>
+  </action>
+  <action name="actionTaperstires">
+   <property name="text">
+    <string>Tapestries</string>
+   </property>
+  </action>
+  <action name="actionWind_Chimes">
+   <property name="text">
+    <string>Wind Chimes</string>
+   </property>
+  </action>
+  <action name="actionSnacks">
+   <property name="text">
+    <string>Snacks</string>
+   </property>
+  </action>
+  <action name="actionDeserts">
+   <property name="text">
+    <string>Deserts</string>
+   </property>
+  </action>
+  <action name="actionChinese">
+   <property name="text">
+    <string>Chinese</string>
+   </property>
+  </action>
+  <action name="actionNorth_Indian">
+   <property name="text">
+    <string>North Indian</string>
+   </property>
+  </action>
+  <action name="actionSouth_Indian">
+   <property name="text">
+    <string>South Indian</string>
+   </property>
+  </action>
+  <action name="actionChats">
+   <property name="text">
+    <string>Chats</string>
+   </property>
+  </action>
+  <action name="actionServices">
+   <property name="text">
+    <string>Services</string>
+   </property>
+  </action>
+  <action name="actionShoes">
+   <property name="text">
+    <string>Shoes</string>
+   </property>
+  </action>
+  <action name="actionFlip_FLops">
+   <property name="text">
+    <string>Flip FLops</string>
+   </property>
+  </action>
+  <action name="actionBoots">
+   <property name="text">
+    <string>Boots</string>
+   </property>
+  </action>
+  <action name="actionSneakers">
+   <property name="text">
+    <string>Sneakers</string>
+   </property>
+  </action>
+  <action name="actionHeels">
+   <property name="text">
+    <string>Heels</string>
+   </property>
+  </action>
+  <action name="actionKurtis">
+   <property name="text">
+    <string>Kurtis</string>
+   </property>
+  </action>
+  <action name="actionWinterwear">
+   <property name="text">
+    <string>Winter wear</string>
+   </property>
+  </action>
+  <action name="actionCasials">
+   <property name="text">
+    <string>Sports Wear</string>
+   </property>
+  </action>
+  <action name="actionCasials_2">
+   <property name="text">
+    <string>Casuals</string>
+   </property>
+  </action>
+  <action name="actionStationary">
+   <property name="text">
+    <string>Stationary</string>
+   </property>
+  </action>
+  <action name="actionSkin_care">
+   <property name="text">
+    <string>Skin care</string>
+   </property>
+  </action>
+  <action name="actionEye_makeup">
+   <property name="text">
+    <string>Makeup</string>
+   </property>
+  </action>
+  <action name="actionKeychains">
+   <property name="text">
+    <string>Keychains</string>
+   </property>
+  </action>
+  <action name="actionTupperware">
+   <property name="text">
+    <string>Tupperware</string>
+   </property>
+  </action>
+  <action name="actionKeycgains">
+   <property name="text">
+    <string>Keychaains</string>
+   </property>
+  </action>
+  <action name="actionHandmade">
+   <property name="text">
+    <string>Handmade</string>
+   </property>
+  </action>
+  <action name="actioneLECTRONICS">
+   <property name="text">
+    <string>Electronics</string>
+   </property>
+  </action>
+  <action name="actionElectronics">
+   <property name="text">
+    <string>Electronics</string>
+   </property>
+  </action>
+  <action name="actionMiscelaneous">
+   <property name="text">
+    <string>Miscelaneous</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
