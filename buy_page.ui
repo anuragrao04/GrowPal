@@ -620,7 +620,7 @@
   </action>
   <action name="actionKeycgains">
    <property name="text">
-    <string>Keychaains</string>
+    <string>Key Chains</string>
    </property>
   </action>
   <action name="actionHandmade">
