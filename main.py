@@ -21,9 +21,9 @@ class MainWindow(QMainWindow):
         self.register_button.clicked.connect(self.gotoregister_page) #on button click, executes the function gotoregister_page()
 
     def gotologin_page(self):
-        widget.setCurrentIndex(widget.currentIndex() + 1) #Index manipulaation to change the stacked screens 
+        widget.setCurrentIndex(1) #Index manipulation to change the stacked screens 
     def gotoregister_page(self):
-        widget.setCurrentIndex(widget.currentIndex() + 2) #Same Index manipulation stuff 
+        widget.setCurrentIndex(2) #Same Index manipulation stuff 
 
 
 
@@ -39,7 +39,7 @@ class login_page(QMainWindow):
             print("empty")
         
         else:
-            widget.setCurrentIndex(widget.currentIndex()+2)
+            widget.setCurrentIndex(3)
     
         
 
@@ -52,7 +52,7 @@ class register_page(QMainWindow):
         if self.lineEdit_email.text() == "" or self.lineEdit_phnumber.text() == "" or self.lineEdit_password.text() == "" or self.lineEdit_repeatpassword.text() == "":
             print("empty")   #checks for empty fields 
         elif self.lineEdit_password.text() == self.lineEdit_repeatpassword.text(): #checking if both the password and confirm password fields match
-            widget.setCurrentIndex(widget.currentIndex()+1)
+            widget.setCurrentIndex(3)
         elif self.lineEdit_password.text() != self.lineEdit_repeatpassword.text(): #if those two fields do not match, display an error box
             error_dialog = QtWidgets.QErrorMessage(self)
             error_dialog.setWindowTitle('Password') #Window title for the error box
@@ -73,10 +73,10 @@ main_window = MainWindow() #setting the classes as a variable for QStacked widge
 loginpage = login_page() #same thing as above
 buypage = buy_page()
 registerpage = register_page()
-widget.addWidget(main_window) #1        #Indexing for all the stacked pages. indexes are appointed in the order they are added. 
-widget.addWidget(loginpage)   #2
-widget.addWidget(registerpage)#3
-widget.addWidget(buypage)     #4
+widget.addWidget(main_window) #0        #Indexing for all the stacked pages. indexes are appointed in the order they are added. 
+widget.addWidget(loginpage)   #1
+widget.addWidget(registerpage)#2
+widget.addWidget(buypage)     #3
 #End of indexing for stacked widgets 
 
 
@@ -91,3 +91,5 @@ try:
 
 except:
     print("Exiting")
+
+
