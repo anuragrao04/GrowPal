@@ -3,13 +3,15 @@ import sys #why sys library? it helps to execute the main GUI window
 from PyQt5.uic import loadUi #Why loadUI? used to load the .ui files to the main execution flow 
 from PyQt5 import QtWidgets 
 from PyQt5.QtWidgets import QDialog, QApplication, QMainWindow
+from validate_email import validate_email
+
 #PyQt5 -> framework for creating GUI. QDialog, QApplication, etc are just modules of the PyQt5 library
 
 #End of import statements 
 
 
 #Variables:
-global dictionary_emails_and_passwords
+global dictionary_emails_passwords
 #variable not really used, just experimenting
 
 #Class declaration for all pages:
@@ -51,8 +53,23 @@ class register_page(QMainWindow):
     def register_button_pressed(self): 
         if self.lineEdit_email.text() == "" or self.lineEdit_phnumber.text() == "" or self.lineEdit_password.text() == "" or self.lineEdit_repeatpassword.text() == "":
             print("empty")   #checks for empty fields 
+        elif len(self.lineEdit_phnumber.text()) != 10:
+            error_dialog = QtWidgets.QErrorMessage(self)
+            error_dialog.setWindowTitle('Phone Number')
+            error_dialog.showMessage('Please enter a valid phone number')
+
+
+
         elif self.lineEdit_password.text() == self.lineEdit_repeatpassword.text(): #checking if both the password and confirm password fields match
-            widget.setCurrentIndex(3)
+           
+            if validate_email(self.lineEdit_email.text()):
+                widget.setCurrentIndex(3)
+            else:
+                error_dialog = QtWidgets.QErrorMessage(self)
+                error_dialog.setWindowTitle('Email')
+                error_dialog.showMessage('Please enter a valid email ID')
+
+
         elif self.lineEdit_password.text() != self.lineEdit_repeatpassword.text(): #if those two fields do not match, display an error box
             error_dialog = QtWidgets.QErrorMessage(self)
             error_dialog.setWindowTitle('Password') #Window title for the error box
