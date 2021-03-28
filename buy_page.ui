@@ -10,6 +10,14 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+    <weight>75</weight>
+    <italic>true</italic>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>GrowPal</string>
   </property>
@@ -287,6 +295,48 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt; font-weight:600; text-decoration: underline;&quot;&gt;TRENDING         &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_logout">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>0</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Logout</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_sell">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>0</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Sell</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -294,7 +344,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>30</height>
+     <height>32</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuCatogories">
@@ -382,25 +432,13 @@
     <addaction name="actionStationary"/>
     <addaction name="menuOthers"/>
    </widget>
-   <widget class="QMenu" name="menuSell">
-    <property name="title">
-     <string>Sell</string>
-    </property>
-   </widget>
    <widget class="QMenu" name="menuTrack_Package">
     <property name="title">
      <string>Your orders</string>
     </property>
    </widget>
-   <widget class="QMenu" name="menuLogout">
-    <property name="title">
-     <string>Logout</string>
-    </property>
-   </widget>
    <addaction name="menuCatogories"/>
-   <addaction name="menuSell"/>
    <addaction name="menuTrack_Package"/>
-   <addaction name="menuLogout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionMen_s_clothing">

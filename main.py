@@ -11,7 +11,12 @@ from validate_email import validate_email
 
 
 #Variables:
-global dictionary_emails_passwords
+global dictionary_email_password
+dictionary_email_password = {'admin':'admin@password'} 
+global register_page_email
+global register_page_password
+
+
 #variable not really used, just experimenting
 
 #Class declaration for all pages:
@@ -35,13 +40,35 @@ class login_page(QMainWindow):
     def __init__(self):
         super(login_page,self).__init__() 
         loadUi("loginPage.ui",self) #loads the .ui file 
+        self.pushButton_back.clicked.connect(self.back_button_pressed)
         self.pushbutton_login.clicked.connect(self.login_button_pressed) #button thing. directs to login_button_pressed() 
+    def back_button_pressed(self):
+        widget.setCurrentIndex(0)
     def login_button_pressed(self):
-        if self.lineedit_username.text() == "" or self.lineedit_password.text() == "": #checks if there are any empty fields 
+        if self.lineEdit_email.text() == "" or self.lineEdit_password.text() == "": #checks if there are any empty fields 
             print("empty")
         
         else:
-            widget.setCurrentIndex(3)
+            if self.lineEdit_email.text() in dictionary_email_password.keys():      #checking if username is in the dictionary. the .keys() function returns all the key values
+
+                if self.lineEdit_password.text() == dictionary_email_password[self.lineEdit_email.text()]:     #checking if the password matches the username 
+                    widget.setCurrentIndex(3)
+                    
+
+                else: 
+                    error_dialog = QtWidgets.QErrorMessage(self)
+                    error_dialog.setWindowTitle('Password')
+                    error_dialog.showMessage('Incorrect password, please try again')
+
+
+                    
+                     
+            else:
+                error_dialog = QtWidgets.QErrorMessage(self)
+                error_dialog.setWindowTitle('Account')
+                error_dialog.showMessage('Please create an account')                   #if username is not in the dictionary 
+                widget.setCurrentIndex(2)   
+            
     
         
 
@@ -49,7 +76,10 @@ class register_page(QMainWindow):
     def __init__(self):
         super(register_page, self).__init__()
         loadUi("registerPage.ui", self) #loads the .ui file 
+        self.pushButton_back.clicked.connect(self.back_button_pressed)
         self.pushbutton_register.clicked.connect(self.register_button_pressed) #button thing again
+    def back_button_pressed(self):
+        widget.setCurrentIndex(0)    
     def register_button_pressed(self): 
         if self.lineEdit_email.text() == "" or self.lineEdit_phnumber.text() == "" or self.lineEdit_password.text() == "" or self.lineEdit_repeatpassword.text() == "":
             print("empty")   #checks for empty fields 
@@ -63,7 +93,15 @@ class register_page(QMainWindow):
         elif self.lineEdit_password.text() == self.lineEdit_repeatpassword.text(): #checking if both the password and confirm password fields match
            
             if validate_email(self.lineEdit_email.text()):
-                widget.setCurrentIndex(3)
+                
+                
+                register_page_email = self.lineEdit_email.text()
+                register_page_password = self.lineEdit_password.text()
+                dictionary_email_password.update({register_page_email:register_page_password})
+                error_dialog = QtWidgets.QErrorMessage(self)
+                error_dialog.setWindowTitle('Thanks!')
+                error_dialog.showMessage('Thanks for creating an account with us! Please login with the same credentials')
+                widget.setCurrentIndex(1)
             else:
                 error_dialog = QtWidgets.QErrorMessage(self)
                 error_dialog.setWindowTitle('Email')
@@ -78,6 +116,9 @@ class buy_page(QMainWindow):
     def __init__(self) -> None:
         super(buy_page, self).__init__()
         loadUi("buy_page.ui", self) #loads the .ui file 
+        self.pushButton_logout.clicked.connect(self.logout)
+    def logout(self):
+        widget.setCurrentIndex(0)
 #End of class declaration
 
 
