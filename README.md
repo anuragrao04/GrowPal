@@ -10,10 +10,16 @@ pip install validate_email
 
 ## Progress
 Make UI pages - 70%
+
 Login page and logic for username and password - Done
+
 scroll widget for sell and buy page - N/A
+
 screen for adding and deleting selling items - N/A
+
 screen for checkout and transaction - N/A
+
 SQL integration - N/A
+
 Testing - N/A
 
