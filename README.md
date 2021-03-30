@@ -1,9 +1,19 @@
 # GrowPal
 This is a repository for managing code for the GrowPal project. 
 
-# Installation
+## Installation
 run 'main.py' after cloning the entire repository as this code has a few dependencies. 
 
-# Progress
-Completed UI elements for login/register and buy pages. The logic for storing data from the text input fields is in progress. 
+## Libraries required:
+pip install PyQt5
+pip install validate_email
+
+## Progress
+Make UI pages - 70%
+Login page and logic for username and password - Done
+scroll widget for sell and buy page - N/A
+screen for adding and deleting selling items - N/A
+screen for checkout and transaction - N/A
+SQL integration - N/A
+Testing - N/A
 
