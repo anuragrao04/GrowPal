@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>Icon.png</normaloff>Icon.png</iconset>
+    <normaloff>logo.jpg</normaloff>logo.jpg</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -76,7 +76,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>30</height>
     </rect>
    </property>
   </widget>
