@@ -101,7 +101,7 @@ class register_page(QMainWindow):
             error_dialog.showMessage('Please enter a valid phone number')
             self.lineEdit_phnumber.setText("")
 
-        elif self.lineEdit_password.text() == self.lineEdit_repeatpassword.text(): # checking if both the password and confirm password fields match
+        elif self.lineEdit_password.text() == self.lineEdit_repeatpassword.text(): 
             if validate_email(self.lineEdit_email.text()):
                 register_page_username = self.lineEdit_username.text()
                 register_page_password = self.lineEdit_password.text()
@@ -129,7 +129,7 @@ class register_page(QMainWindow):
 class buy_page(QMainWindow):
     def __init__(self) -> None:
         super(buy_page, self).__init__()
-        loadUi("buy_page.ui", self) # loads the .ui file
+        loadUi("buy_page.ui", self)
         self.pushButton_logout.clicked.connect(self.logout)
     def logout(self):
         widget.setCurrentIndex(0)
