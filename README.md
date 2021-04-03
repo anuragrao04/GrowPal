@@ -6,6 +6,7 @@ run 'main.py' after cloning the entire repository as this code has a few depende
 
 ## Libraries required:
 pip install PyQt5
+
 pip install validate_email
 
 ## Progress
