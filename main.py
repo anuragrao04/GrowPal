@@ -1,9 +1,11 @@
 # Import statements:
 import sys  
+#pip install PyQt5
 from PyQt5.uic import loadUi 
 from PyQt5 import QtWidgets 
 from PyQt5.QtWidgets import QDialog, QApplication, QMainWindow, QLineEdit
 from validate_email import validate_email
+#pip install validate_email
 
 
 # Variables:
@@ -45,6 +47,8 @@ class login_page(QMainWindow):
 
     def back_button_pressed(self):
         widget.setCurrentIndex(0)
+
+
     def login_button_pressed(self):
         if self.lineEdit_email.text() == "" or self.lineEdit_password.text() == "": 
             print("empty")
@@ -67,6 +71,8 @@ class login_page(QMainWindow):
                 self.lineEdit_password.setText("")
                 widget.setCurrentIndex(2)
 
+
+
 class register_page(QMainWindow):
     def __init__(self):
         super(register_page, self).__init__()
@@ -76,11 +82,15 @@ class register_page(QMainWindow):
         self.sp_view.clicked.connect(self.sp_view_clicked)
         self.cp_view.clicked.connect(self.cp_view_clicked)
 
+
+
     def sp_view_clicked(self):
         if self.sp_view.isChecked():
             self.lineEdit_password.setEchoMode(QLineEdit.Normal)
         else:
             self.lineEdit_password.setEchoMode(QLineEdit.Password)
+
+
 
     def cp_view_clicked(self):
         if self.cp_view.isChecked():
@@ -88,8 +98,11 @@ class register_page(QMainWindow):
         else:
             self.lineEdit_repeatpassword.setEchoMode(QLineEdit.Password)
 
+
     def back_button_pressed(self):
-        widget.setCurrentIndex(0)    
+        widget.setCurrentIndex(0)
+
+
     def register_button_pressed(self):
 
         if self.lineEdit_username.text() == "" or self.lineEdit_email.text() == "" or self.lineEdit_phnumber.text() == "" or self.lineEdit_password.text() == "" or self.lineEdit_repeatpassword.text() == "":
@@ -116,8 +129,9 @@ class register_page(QMainWindow):
                 error_dialog = QtWidgets.QErrorMessage(self)
                 error_dialog.setWindowTitle('Email')
                 error_dialog.showMessage('Please enter a valid email ID')
-                self.lineEdit_password.setText("")
-                self.lineEdit_repeatpassword.setText("")
+                self.lineEdit_email.setText("")
+
+
 
         elif self.lineEdit_password.text() != self.lineEdit_repeatpassword.text(): 
             error_dialog = QtWidgets.QErrorMessage(self)
