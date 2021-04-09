@@ -2,7 +2,8 @@
 import sys  
 #pip install PyQt5
 from PyQt5.uic import loadUi 
-from PyQt5 import QtWidgets 
+from PyQt5 import QtWidgets
+from PyQt5 import QtGui  
 from PyQt5.QtWidgets import QDialog, QApplication, QMainWindow, QLineEdit
 from validate_email import validate_email
 #pip install validate_email
@@ -77,10 +78,12 @@ class register_page(QMainWindow):
     def __init__(self):
         super(register_page, self).__init__()
         loadUi("registerPage.ui", self) 
-        self.pushButton_back.clicked.connect(self.back_button_pressed)
-        self.pushbutton_register.clicked.connect(self.register_button_pressed) 
+        self.pushButton_back.clicked.connect(self.back_button_clicked)
+        self.pushbutton_register.clicked.connect(self.register_button_clicked) 
         self.sp_view.clicked.connect(self.sp_view_clicked)
         self.cp_view.clicked.connect(self.cp_view_clicked)
+       
+        
 
 
 
@@ -99,11 +102,12 @@ class register_page(QMainWindow):
             self.lineEdit_repeatpassword.setEchoMode(QLineEdit.Password)
 
 
-    def back_button_pressed(self):
+    def back_button_clicked(self):
         widget.setCurrentIndex(0)
 
 
-    def register_button_pressed(self):
+    def register_button_clicked(self):
+       
 
         if self.lineEdit_username.text() == "" or self.lineEdit_email.text() == "" or self.lineEdit_phnumber.text() == "" or self.lineEdit_password.text() == "" or self.lineEdit_repeatpassword.text() == "":
             print("empty")  
