@@ -149,9 +149,18 @@ class buy_page(QMainWindow):
         super(buy_page, self).__init__()
         loadUi("buy_page.ui", self)
         self.pushButton_logout.clicked.connect(self.logout)
+        self.pushButton_sell.clicked.connect(self.gotoSellPage)
     def logout(self):
         widget.setCurrentIndex(0)
+    def gotoSellPage(self):
+        widget.setCurrentIndex(4)
 
+
+class sellPage(QMainWindow):
+    def __init__(self) -> None:
+        super(sellPage, self).__init__()
+        loadUi("sellPage.ui",self)
+        
 # End of class declaration
 
 
@@ -164,11 +173,13 @@ main_window = MainWindow()
 loginpage = login_page() 
 buypage = buy_page()
 registerpage = register_page()
+sellpage = sellPage()
 # Indexing for all the stacked pages. indexes are appointed in the order they are added.
 widget.addWidget(main_window) # 0
 widget.addWidget(loginpage)   # 1
 widget.addWidget(registerpage) # 2
 widget.addWidget(buypage)     # 3
+widget.addWidget(sellpage)      #4
 # End of indexing for stacked widgets
 
 
