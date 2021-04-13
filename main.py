@@ -26,7 +26,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("GrowPal")
         self.login_button.clicked.connect(self.gotologin_page) 
         self.register_button.clicked.connect(self.gotoregister_page) 
-
+        self.iconName = "logo.jpg"
     def gotologin_page(self):
         widget.setCurrentIndex(1) 
     def gotoregister_page(self):
