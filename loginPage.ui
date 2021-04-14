@@ -20,7 +20,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="1" column="0" colspan="2">
-     <widget class="QLabel" name="label_email">
+     <widget class="QLabel" name="label_username">
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:26pt; font-weight:600;&quot;&gt;Username:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
@@ -92,7 +92,7 @@
      </widget>
     </item>
     <item row="1" column="2" colspan="2">
-     <widget class="QLineEdit" name="lineEdit_email">
+     <widget class="QLineEdit" name="lineEdit_username">
       <property name="styleSheet">
        <string notr="true">font-size:18pt;</string>
       </property>

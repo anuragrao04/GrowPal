@@ -14,7 +14,10 @@ global loginpage_details
 loginpage_details = {'admin': 'admin@password'}
 global register_page_email
 global register_page_password
-
+#global logged_in_username
+#logged_in_username = "" 
+#global logged_in_password
+#logged_in_password = ""
 
 
 
@@ -26,7 +29,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("GrowPal")
         self.login_button.clicked.connect(self.gotologin_page) 
         self.register_button.clicked.connect(self.gotoregister_page) 
-        self.iconName = "logo.jpg"
+        #self.iconName = "logo.jpg"
     def gotologin_page(self):
         widget.setCurrentIndex(1) 
     def gotoregister_page(self):
@@ -36,6 +39,10 @@ class login_page(QMainWindow):
     def __init__(self):
         super(login_page,self).__init__() 
         loadUi("loginPage.ui",self) 
+        #global logged_in_username
+        logged_in_username = "" 
+        #global logged_in_password
+        logged_in_password = ""
         self.pushButton_back.clicked.connect(self.back_button_pressed)
         self.pushbutton_login.clicked.connect(self.login_button_pressed) 
         self.password_view.clicked.connect(self.pass_view_clicked)
@@ -51,13 +58,17 @@ class login_page(QMainWindow):
 
 
     def login_button_pressed(self):
-        if self.lineEdit_email.text() == "" or self.lineEdit_password.text() == "": 
+        if self.lineEdit_username.text() == "" or self.lineEdit_password.text() == "": 
             print("empty")
         else:
-            if self.lineEdit_email.text() in loginpage_details.keys():     
-                if self.lineEdit_password.text() == loginpage_details[self.lineEdit_email.text()]:     
-                    self.lineEdit_email.setText("")
+            if self.lineEdit_username.text() in loginpage_details.keys():     
+                if self.lineEdit_password.text() == loginpage_details[self.lineEdit_username.text()]:     
+                    login_page.logged_in_username = self.lineEdit_username.text()           #it works. don't touch
+                    login_page.logged_in_password = self.lineEdit_password.text()
+                    self.lineEdit_username.setText("")
                     self.lineEdit_password.setText("")
+                    print(login_page.logged_in_username)
+                    print(login_page.logged_in_password)
                     widget.setCurrentIndex(3)
                 else: 
                     error_dialog = QtWidgets.QErrorMessage(self)
@@ -152,6 +163,8 @@ class buy_page(QMainWindow):
         self.pushButton_sell.clicked.connect(self.gotoSellPage)
     def logout(self):
         widget.setCurrentIndex(0)
+        print(login_page.logged_in_username)
+        print(login_page.logged_in_password)
     def gotoSellPage(self):
         widget.setCurrentIndex(4)
 
@@ -160,6 +173,10 @@ class sellPage(QMainWindow):
     def __init__(self) -> None:
         super(sellPage, self).__init__()
         loadUi("sellPage.ui",self)
+        self.pushButton_back.clicked.connect(self.getback)
+        
+    def getback(self):
+        widget.setCurrentIndex(3)
         
 # End of class declaration
 
