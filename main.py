@@ -1,4 +1,4 @@
-# Import statements:
+# -------------------------------------------------------Import statements------------------------------------------------------- #
 import sys  
 #pip install PyQt5
 from PyQt5.uic import loadUi 
@@ -9,7 +9,7 @@ from validate_email import validate_email
 #pip install validate_email
 
 
-# Variables:
+# -------------------------------------------------------Variables------------------------------------------------------- #
 global loginpage_details
 loginpage_details = {'admin': 'admin@password'}
 global register_page_email
@@ -21,10 +21,11 @@ global register_page_password
 
 
 
-# Class declaration for all pages:
-class MainWindow(QMainWindow):
+# -------------------------------------------------------Class declaration for all pages------------------------------------------------------- #
+# -------------------------------------------------------loginregisterpage------------------------------------------------------- #
+class loginregisterpage(QMainWindow):
     def __init__(self):
-        super(MainWindow, self).__init__()
+        super(loginregisterpage, self).__init__()
         loadUi("loginRegisterPage.ui",self) 
         self.setWindowTitle("GrowPal")
         self.login_button.clicked.connect(self.gotologin_page) 
@@ -35,6 +36,9 @@ class MainWindow(QMainWindow):
     def gotoregister_page(self):
         widget.setCurrentIndex(2)
 
+
+
+# -------------------------------------------------------login_page------------------------------------------------------- #
 class login_page(QMainWindow):
     def __init__(self):
         super(login_page,self).__init__() 
@@ -85,6 +89,9 @@ class login_page(QMainWindow):
 
 
 
+
+
+# -------------------------------------------------------register_page------------------------------------------------------- #
 class register_page(QMainWindow):
     def __init__(self):
         super(register_page, self).__init__()
@@ -155,6 +162,9 @@ class register_page(QMainWindow):
             self.lineEdit_password.setText("")
             self.lineEdit_repeatpassword.setText("")
 
+
+
+# -------------------------------------------------------buy_page------------------------------------------------------- #
 class buy_page(QMainWindow):
     def __init__(self) -> None:
         super(buy_page, self).__init__()
@@ -168,31 +178,47 @@ class buy_page(QMainWindow):
     def gotoSellPage(self):
         widget.setCurrentIndex(4)
 
-
+# -------------------------------------------------------sellPage------------------------------------------------------- #
 class sellPage(QMainWindow):
     def __init__(self) -> None:
         super(sellPage, self).__init__()
         loadUi("sellPage.ui",self)
         self.pushButton_back.clicked.connect(self.getback)
+        self.pushButton_UploadImages.clicked.connect(self.upload)
+        self.pushButton_Sell.clicked.connect(self.sell)
         
     def getback(self):
         widget.setCurrentIndex(3)
+    def upload(self):
+        pass
+    def sell(self):
+        pass
         
-# End of class declaration
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    # End of class declaration
 
 
-# Indexing for stacked widget:
+# -------------------------------------------------------Indexing for stacked widget------------------------------------------------------- #
 app = QApplication(sys.argv)
 widget = QtWidgets.QStackedWidget() 
 
 
-main_window = MainWindow() 
+login_register_page = loginregisterpage() 
 loginpage = login_page() 
 buypage = buy_page()
 registerpage = register_page()
 sellpage = sellPage()
 # Indexing for all the stacked pages. indexes are appointed in the order they are added.
-widget.addWidget(main_window) # 0
+widget.addWidget(login_register_page) # 0
 widget.addWidget(loginpage)   # 1
 widget.addWidget(registerpage) # 2
 widget.addWidget(buypage)     # 3
