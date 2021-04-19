@@ -80,17 +80,6 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="lineEdit">
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-       </widget>
-      </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_Price">
         <property name="font">
@@ -106,7 +95,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="lineEdit_2">
+       <widget class="QLineEdit" name="lineEdit_price">
         <property name="font">
          <font>
           <pointsize>16</pointsize>
@@ -132,10 +121,12 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QLineEdit" name="lineEdit_8">
+       <widget class="QLineEdit" name="lineEdit_description">
         <property name="font">
          <font>
           <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
        </widget>
@@ -155,7 +146,7 @@
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QLineEdit" name="lineEdit_3">
+       <widget class="QLineEdit" name="lineEdit_name">
         <property name="font">
          <font>
           <pointsize>16</pointsize>
@@ -180,7 +171,7 @@
        </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QLineEdit" name="lineEdit_4">
+       <widget class="QLineEdit" name="lineEdit_cont_num">
         <property name="font">
          <font>
           <pointsize>16</pointsize>
@@ -205,7 +196,7 @@
        </widget>
       </item>
       <item row="5" column="1">
-       <widget class="QLineEdit" name="lineEdit_5">
+       <widget class="QLineEdit" name="lineEdit_email">
         <property name="font">
          <font>
           <pointsize>16</pointsize>
@@ -230,7 +221,7 @@
        </widget>
       </item>
       <item row="6" column="1">
-       <widget class="QLineEdit" name="lineEdit_6">
+       <widget class="QLineEdit" name="lineEdit_address">
         <property name="font">
          <font>
           <pointsize>16</pointsize>
@@ -255,7 +246,18 @@
        </widget>
       </item>
       <item row="7" column="1">
-       <widget class="QLineEdit" name="lineEdit_7">
+       <widget class="QLineEdit" name="lineEdit_upi_id">
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_prod_name">
         <property name="font">
          <font>
           <pointsize>16</pointsize>

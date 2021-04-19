@@ -192,9 +192,22 @@ class sellPage(QMainWindow):
     def upload(self):
         pass
     def sell(self):
-        pass
-        
-        
+        if self.lineEdit_prod_name.text() == "" or self.lineEdit_price.text() == "" or self.lineEdit_description.text() == "" or self.lineEdit_name.text == "" or self.lineEdit_cont_num.text() == "" or self.lineEdit_email.text() == "" or self.lineEdit_address.text() == "" or self.lineEdit_upi_id == "":
+            print("empty")
+            
+        else: 
+            sellPage.given_prod_name = self.lineEdit_prod_name.text()
+            sellPage.given_price = self.lineEdit_price.text()
+            sellPage.given_description = self.lineEdit_description.text()
+            sellPage.given_name = self.lineEdit_name.text()
+            sellPage.given_cont_num = self.lineEdit_cont_num.text()
+            sellPage.given_email = self.lineEdit_email.text()
+            sellPage.given_address = self.lineEdit_address.text()
+            sellPage.given_upi_id = self.lineEdit_upi_id.text()
+            error_dialog = QtWidgets.QErrorMessage(self)
+            error_dialog.setWindowTitle('Sell') 
+            error_dialog.showMessage('Your product is listed!')
+            widget.setCurrentIndex(3)
         
         
         
@@ -237,5 +250,6 @@ try:
 
 except:
     print("Exiting")
+    
 
 
