@@ -71,6 +71,9 @@ class login_page(QMainWindow):
                     login_page.logged_in_password = self.lineEdit_password.text()
                     self.lineEdit_username.setText("")
                     self.lineEdit_password.setText("")
+                    error_dialog = QtWidgets.QErrorMessage(self)
+                    error_dialog.setWindowTitle('Welcome')
+                    error_dialog.showMessage(f"Welcome back {login_page.logged_in_username}!")
                     print(login_page.logged_in_username)
                     print(login_page.logged_in_password)
                     widget.setCurrentIndex(3)
@@ -83,7 +86,7 @@ class login_page(QMainWindow):
                 error_dialog = QtWidgets.QErrorMessage(self)
                 error_dialog.setWindowTitle('Account')
                 error_dialog.showMessage('Please create an account')                  
-                self.lineEdit_email.setText("")
+                self.lineEdit_username.setText("")
                 self.lineEdit_password.setText("")
                 widget.setCurrentIndex(2)
 
