@@ -8,7 +8,6 @@ from PyQt5.QtWidgets import QDialog, QApplication, QMainWindow, QLineEdit
 from validate_email import validate_email
 #pip install validate_email
 
-
 # -------------------------------------------------------Variables------------------------------------------------------- #
 global loginpage_details
 loginpage_details = {'admin': 'admin@password'}
@@ -172,6 +171,8 @@ class buy_page(QMainWindow):
     def __init__(self) -> None:
         super(buy_page, self).__init__()
         loadUi("buy_page.ui", self)
+        menubar = self.menuBar()
+        menubar.setNativeMenuBar(False)
         self.pushButton_logout.clicked.connect(self.logout)
         self.pushButton_sell.clicked.connect(self.gotoSellPage)
     def logout(self):
