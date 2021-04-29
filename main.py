@@ -13,6 +13,8 @@ global loginpage_details
 loginpage_details = {'admin': 'admin@password'}
 global register_page_email
 global register_page_password
+global listedItems
+listedItems = {}
 #global logged_in_username
 #logged_in_username = "" 
 #global logged_in_password
@@ -140,15 +142,22 @@ class register_page(QMainWindow):
 
         elif self.lineEdit_password.text() == self.lineEdit_repeatpassword.text(): 
             if validate_email(self.lineEdit_email.text()):
-                register_page_username = self.lineEdit_username.text()
-                register_page_password = self.lineEdit_password.text()
-                loginpage_details.update({register_page_username:register_page_password})
-                self.lineEdit_password.setText("")
-                self.lineEdit_repeatpassword.setText("")
-                error_dialog = QtWidgets.QErrorMessage(self)
-                error_dialog.setWindowTitle('Thanks!')
-                error_dialog.showMessage('Thanks for creating an account with us! Please login with the same credentials')
-                widget.setCurrentIndex(1)
+                if self.lineEdit_username.text() not in loginpage_details.keys():
+                    register_page_username = self.lineEdit_username.text()
+                    register_page_password = self.lineEdit_password.text()
+                    loginpage_details.update({register_page_username:register_page_password})
+                    self.lineEdit_password.setText("")
+                    self.lineEdit_repeatpassword.setText("")
+                    error_dialog = QtWidgets.QErrorMessage(self)
+                    error_dialog.setWindowTitle('Thanks!')
+                    error_dialog.showMessage('Thanks for creating an account with us! Please login with the same credentials')
+                    widget.setCurrentIndex(1)
+                else:
+                    error_dialog = QtWidgets.QErrorMessage(self)
+                    error_dialog.setWindowTitle('Account')
+                    error_dialog.showMessage('You are already registered, please login.')
+                    widget.setCurrentIndex(1)
+                    
             else:
                 error_dialog = QtWidgets.QErrorMessage(self)
                 error_dialog.setWindowTitle('Email')
@@ -209,8 +218,10 @@ class sellPage(QMainWindow):
             sellPage.given_address = self.lineEdit_address.text()
             sellPage.given_upi_id = self.lineEdit_upi_id.text()
             error_dialog = QtWidgets.QErrorMessage(self)
+            listedItems.update({sellPage.given_prod_name:sellPage.given_price})
+            print(listedItems)
             error_dialog.setWindowTitle('Sell') 
-            error_dialog.showMessage('Your product is listed!')
+            error_dialog.showMessage(f"Your product {sellPage.given_prod_name} is now listed for {sellPage.given_price} rupees")
             widget.setCurrentIndex(3)
         
         
