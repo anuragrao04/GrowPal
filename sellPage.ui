@@ -90,7 +90,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Price:</string>
+         <string>Price(in rupees):</string>
         </property>
        </widget>
       </item>
