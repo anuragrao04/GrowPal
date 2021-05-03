@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>837</width>
-    <height>610</height>
+    <height>629</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="2" column="2">
+    <item row="3" column="2">
      <widget class="QPushButton" name="pushButton_UploadImages">
       <property name="minimumSize">
        <size>
@@ -35,18 +35,19 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="0" colspan="2">
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
+    <item row="6" column="0">
+     <widget class="QPushButton" name="pushButton_back">
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
+      <property name="text">
+       <string>&lt;</string>
       </property>
-     </spacer>
+     </widget>
     </item>
     <item row="0" column="0">
      <widget class="QLabel" name="label">
@@ -63,6 +64,19 @@
        <string>Selling?     </string>
       </property>
      </widget>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
     </item>
     <item row="1" column="0" colspan="3">
      <layout class="QFormLayout" name="formLayout">
@@ -99,13 +113,13 @@
         <property name="font">
          <font>
           <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
        </widget>
       </item>
-      <item row="2" column="0">
+      <item row="3" column="0">
        <widget class="QLabel" name="label_Description">
         <property name="font">
          <font>
@@ -120,18 +134,18 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="1">
+      <item row="3" column="1">
        <widget class="QLineEdit" name="lineEdit_description">
         <property name="font">
          <font>
           <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
+      <item row="4" column="0">
        <widget class="QLabel" name="label_Name">
         <property name="font">
          <font>
@@ -145,18 +159,18 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="1">
+      <item row="4" column="1">
        <widget class="QLineEdit" name="lineEdit_name">
         <property name="font">
          <font>
           <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
        </widget>
       </item>
-      <item row="4" column="0">
+      <item row="5" column="0">
        <widget class="QLabel" name="label_phnumber">
         <property name="font">
          <font>
@@ -170,18 +184,18 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="1">
+      <item row="5" column="1">
        <widget class="QLineEdit" name="lineEdit_cont_num">
         <property name="font">
          <font>
           <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
        </widget>
       </item>
-      <item row="5" column="0">
+      <item row="6" column="0">
        <widget class="QLabel" name="label_email">
         <property name="font">
          <font>
@@ -195,18 +209,18 @@
         </property>
        </widget>
       </item>
-      <item row="5" column="1">
+      <item row="6" column="1">
        <widget class="QLineEdit" name="lineEdit_email">
         <property name="font">
          <font>
           <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
        </widget>
       </item>
-      <item row="6" column="0">
+      <item row="7" column="0">
        <widget class="QLabel" name="label_address">
         <property name="font">
          <font>
@@ -220,18 +234,18 @@
         </property>
        </widget>
       </item>
-      <item row="6" column="1">
+      <item row="7" column="1">
        <widget class="QLineEdit" name="lineEdit_address">
         <property name="font">
          <font>
           <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
        </widget>
       </item>
-      <item row="7" column="0">
+      <item row="8" column="0">
        <widget class="QLabel" name="label_upiID">
         <property name="font">
          <font>
@@ -245,13 +259,13 @@
         </property>
        </widget>
       </item>
-      <item row="7" column="1">
+      <item row="8" column="1">
        <widget class="QLineEdit" name="lineEdit_upi_id">
         <property name="font">
          <font>
           <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
        </widget>
@@ -261,29 +275,220 @@
         <property name="font">
          <font>
           <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
        </widget>
       </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Product Category</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="comboBox">
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Select Category </string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Food-Services </string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Food-Snacks</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Food-Deserts</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Food-Chinese</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Food-North Indian</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Food-South Indian</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Food-Others</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Cosmetics-Skin Care</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Cosmetics-Makeup</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Apparel-Casuals</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Apparel-Dresses</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Apparel-Pants</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Apparel-Shirts/Tops</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Apparel-Sarees</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Apparel-Kurtis</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Apparel-Winter Wear</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Apparel-Footwear</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Apparel-Sport Wear</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Accessories-Rings</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Accessories-Necklaces</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Accessories-Earings</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Accessories-Belts</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Accessories-Bags</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Accessories-Key Chains</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Home Decor-Paintings</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Home Decor-Chandeliers</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Home Decor-Wall Hangings</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Home Decor-Carpets</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Home Decor-Tapestries</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Home Decor-Wind Chimes</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Stationary</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Others-Tupperware</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Others-Handmade</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Others-Electronics</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Others-Miscaleneous</string>
+         </property>
+        </item>
+       </widget>
+      </item>
      </layout>
     </item>
-    <item row="5" column="0">
-     <widget class="QPushButton" name="pushButton_back">
-      <property name="font">
-       <font>
-        <pointsize>28</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1" colspan="2">
+    <item row="6" column="1" colspan="2">
      <widget class="QPushButton" name="pushButton_Sell">
       <property name="minimumSize">
        <size>
