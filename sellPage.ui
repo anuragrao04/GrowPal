@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>837</width>
-    <height>629</height>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -303,6 +303,12 @@
           <weight>50</weight>
           <bold>false</bold>
          </font>
+        </property>
+        <property name="maxVisibleItems">
+         <number>10</number>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
         </property>
         <item>
          <property name="text">
